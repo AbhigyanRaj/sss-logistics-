@@ -1,12 +1,12 @@
 
 :root {
-	--primary: #1c262f;
-	--primary-light: #212d37;
+	--primary: #011E2B;
+	--primary-light: #20313C;
 	--secondary: #0ee951;
 	--tertiary: #00dabf;
 	--gradient: linear-gradient(to right, #0ee951, #00dabf);
 }
-
+#20313C
 h1,
 h2,
 h3,
@@ -331,6 +331,7 @@ li {
 	background: transparent;
 	border-image-source: var(--gradient);
 	box-shadow: 5px 5px 0px 0px var(--secondary);
+	
 }
 
 .btn-tertiary:hover {
@@ -339,6 +340,7 @@ li {
 	border-radius: 0;
 	padding: 10px 30px;
 	transform: translate(5px, 5px);
+	
 }
 
 
@@ -347,8 +349,9 @@ li {
 /********************/
 .services .card {
 	padding: 50px;
-	border-radius: 0;
+	border-radius: 30px;
 	border: 2px solid white;
+	
 }
 
 .services .card:hover {
@@ -357,7 +360,8 @@ li {
 	border-image-slice: 1;
 	border-width: 2px;
 	border-image-source: var(--gradient);
-	box-shadow: 5px 5px 0px 0px #0ee951;
+	box-shadow: 0px 0px 0px 0px #0ee951;
+	border-radius: 50px;
 }
 
 
@@ -367,6 +371,7 @@ li {
 .plans .card {
 	padding: 20px;
 	border: 2px solid white;
+	border-radius: 50px;
 }
 
 
