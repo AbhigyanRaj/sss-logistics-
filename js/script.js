@@ -1,7 +1,4 @@
-/* DESCRIPTION: CUSTOM JS FILE */
 
-/* NAVIGATION*/
-// COLLAPSE THE NAVBAR BY ADDING THE TOP-NAV-COLLAPSE CLASS
 window.onscroll = function () {
 	scrollFunction();
 	scrollFunctionBTT(); // back to top button
@@ -136,13 +133,30 @@ AOS.init({
 
 const cursor = document.querySelector('.cursor');
 
-document.addEventListener('mousemove', e => {
-    cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
-});
+function updateCursorPos(e) {
+    cursor.style.top = e.pageY - 10 + "px";
+    cursor.style.left = e.pageX - 10 + "px";
+}
 
-document.addEventListener('click', e => {
+function expandCursor() {
     cursor.classList.add("expand");
     setTimeout(() => {
         cursor.classList.remove("expand");
     }, 200);
-});
+}
+
+document.addEventListener('mousemove', updateCursorPos);
+
+document.addEventListener('click', expandCursor);
+
+function toggleCursorVisibility() {
+    cursor.style.display = window.innerWidth <= 768 ? 'none' : 'block';
+}
+
+window.addEventListener('resize', toggleCursorVisibility);
+
+toggleCursorVisibility(); // Initially hide or show cursor based on screen width
+
+
+
+
