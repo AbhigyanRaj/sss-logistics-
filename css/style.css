@@ -88,11 +88,15 @@ li {
 		left top,
 		left bottom,
 		from(#0ee951),
-		to(#00dabf)
+		to(#0ee951)
 	);
+	font-weight: 600;
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  
 }
 
 .navbar-nav a:hover,
@@ -165,6 +169,7 @@ li {
 	margin-top: 0.25rem;
 	margin-bottom: 0.25rem;
 	background-color: var(--primary);
+	border-radius: 10px;
 }
 
 .navbar .dropdown-item {
@@ -209,8 +214,11 @@ li {
 		left top,
 		left bottom,
 		from(#0ee951),
-		to(#00dabf)
+		to(#0ee951)
+		
 	);
+	
+	
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
