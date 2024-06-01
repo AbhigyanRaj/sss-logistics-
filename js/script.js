@@ -129,33 +129,7 @@ AOS.init({
 
 
 
-// custom cursor 
 
-const cursor = document.querySelector('.cursor');
-
-function updateCursorPos(e) {
-    cursor.style.top = e.pageY - 10 + "px";
-    cursor.style.left = e.pageX - 10 + "px";
-}
-
-function expandCursor() {
-    cursor.classList.add("expand");
-    setTimeout(() => {
-        cursor.classList.remove("expand");
-    }, 200);
-}
-
-document.addEventListener('mousemove', updateCursorPos);
-
-document.addEventListener('click', expandCursor);
-
-function toggleCursorVisibility() {
-    cursor.style.display = window.innerWidth <= 768 ? 'none' : 'block';
-}
-
-window.addEventListener('resize', toggleCursorVisibility);
-
-toggleCursorVisibility(); // Initially hide or show cursor based on screen width
 
 
 
